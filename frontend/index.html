@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Demandas e Ações</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Painel de Demandas e Ações</h1>
+    <p>Base comum do projeto de extensão: cadastro, acompanhamento e resumo de demandas.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Cadastrar demanda</h2>
+      <form id="demand-form">
+        <input type="text" id="title" placeholder="Título" required>
+        <input type="text" id="category" placeholder="Categoria" required>
+        <textarea id="description" placeholder="Descrição" required></textarea>
+        <select id="status" required>
+          <option value="pendente">Pendente</option>
+          <option value="em andamento">Em andamento</option>
+          <option value="concluída">Concluída</option>
+        </select>
+        <input type="text" id="owner" placeholder="Responsável" required>
+        <input type="date" id="created_at" required>
+        <button type="submit">Salvar demanda</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Resumo</h2>
+      <div id="summary-box">Carregue os dados para visualizar o resumo.</div>
+    </section>
+
+    <section class="card">
+      <h2>Demandas cadastradas</h2>
+      <button id="load-demands-btn">Carregar demandas</button>
+      <div id="status-box">Aguardando carregamento...</div>
+      <ul id="demand-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>ETAPA 2 - Plano de Ação em Prática</p>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
