@@ -75,4 +75,4 @@ def delete_demand_route(demand_id: int):
     if not existing:
         raise HTTPException(status_code=404, detail="Demanda não encontrada.")
     delete_demand(demand_id)
-    return {"message": "Demanda removida com sucesso."}
+    return {"message": "Demanda removida com sucesso.."}
